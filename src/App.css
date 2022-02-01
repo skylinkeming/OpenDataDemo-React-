@@ -1,0 +1,265 @@
+body {
+  text-align: center;
+  margin: 0;
+}
+
+.navbar {
+  background-color: rgba(251, 249, 240, 0.95);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.word img {
+  width: 10px;
+  margin-right: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.col {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin:10px;
+}
+
+.card {
+  min-width: 250px;
+  /* min-height:200px; */
+  margin: 2px 5px 10px;
+  padding: 0 0 15px;
+  background: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0 1px 2px 1px;
+  transition: 0.15s;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  display:inline-block;
+  vertical-align: top;
+}
+.card:hover {
+  background: #fff2d5;
+}
+
+.card:hover .title {
+  color: white;
+}
+
+.card .content {
+  position: relative;
+}
+
+.title {
+  background: #a39e7d;
+  text-align: center;
+}
+
+.name {
+  font-size: 20px;
+  color: cadetblue;
+  padding: 10px;
+}
+
+.card img {
+  width: 250px;
+}
+
+.desc {
+  padding: 10px;
+  line-height: 1.8;
+  font-size: 10px;
+  margin: 0 10px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.categoryMenu {
+  position: absolute;
+  border: 1px solid gray;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  z-index: 5;
+  top: 40px;
+}
+
+.menuItem {
+  white-space: nowrap;
+  cursor: pointer;
+}
+.menuItem:hover {
+  background: rgb(87, 86, 86);
+  color: white;
+}
+
+.selectCategory {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.pageInfo {
+}
+
+.pageNumber.current {
+  font-weight: bold;
+  color: black;
+}
+.pageInfo span {
+  margin-right: 5px;
+  cursor: pointer;
+  color: gray;
+}
+
+.myFavorite {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.favoriteBtn {
+  /* position: absolute;s */
+  width: 30px;
+  margin-right: 5px;
+}
+
+.editBtn {
+  width: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.editBtn img {
+  width: 100%;
+}
+
+.card .favoriteBtn {
+  /* width: 100%; */
+  /* display: none; */
+  /* background: url('favorite-icon-13.jpeg'); */
+}
+.card .favoriteBtn img {
+  width: 30px;
+}
+.card .favoriteBtn.show {
+  display: inline-block;
+  /* background: url('/favorite-icon-14.jpeg'); */
+}
+
+.card:hover .favoriteBtn img {
+  display: inline-block;
+}
+
+.notePart {
+  align-items: center;
+  position: relative;
+}
+
+.editNote {
+  padding-left: 5px;
+}
+
+.note {
+  padding: 5px;
+  color: black;
+  text-align: left;
+  word-break: break-all;
+  background: rgba(251, 249, 240, 0.95);
+  border-radius: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom {
+  width: 100%;
+  height: 40px;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+textarea {
+  height: 60px;
+  width: 90%;
+}
+
+@media all and (min-width: 500px) and (max-width: 767px) {
+  .col {
+    width: 50%;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 160px) and (max-width: 500px) {
+  .col {
+    width: 90%;
+  }
+  .container {
+    width: 100%;
+  }
+  .navbar {
+    display: inline-block;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom:5px;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+  }
+  .card {
+    margin: 10px 0px;
+  }
+  .selectCategory {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .categoryMenu {
+    top: 20px;
+  }
+  .myFavorite {
+    text-align: right;
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display:inline-block;
+  }
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid cadetblue;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
